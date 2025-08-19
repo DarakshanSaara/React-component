@@ -1,0 +1,18 @@
+.tableWrap { width: 100%; overflow: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); }
+.table { width: 100%; border-collapse: collapse; min-width: 560px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; color: var(--fg); }
+thead th { position: sticky; top: 0; background: var(--surface); z-index: 1; }
+
+.sortBtn {
+  display: inline-flex; gap: 6px; align-items: center;
+  font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer;
+}
+.sortBtn:hover { text-decoration: underline; }
+.sortIcon { opacity: .7; }
+
+tr:hover { background: color-mix(in oklab, var(--surface) 70%, transparent); }
+.rowSelected { background: color-mix(in oklab, var(--primary) 8%, transparent); }
+
+.statusWrap { display: flex; align-items: center; gap: 10px; padding: 16px; color: var(--fg); }
+.spinner { width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
